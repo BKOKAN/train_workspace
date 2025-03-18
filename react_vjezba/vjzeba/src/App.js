@@ -32,7 +32,6 @@ function App() {
   };
 
   const handleDeleteClick = (employeeToDelete) => {
-    // Remove the employee from the employeesData array
     const updatedEmployees = employeesData.filter(
       (employee) => employee !== employeeToDelete
     );
@@ -48,7 +47,6 @@ function App() {
     }));
   };
 
-  // Handle saving the edited employee data
   const handleSaveChanges = () => {
     const updatedEmployees = employeesData.map((employee) =>
       employee === selectedEmployee
