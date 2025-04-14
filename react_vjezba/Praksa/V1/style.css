@@ -1,0 +1,99 @@
+* {
+  background-color: #3b3b3b;
+}
+
+header {
+  position: relative;
+  padding: 20px;
+  height: 100px;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  margin: 35px auto;
+  font-size: 48px;
+  color: black;
+}
+
+.navigacija {
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  display: flex;
+  gap: 0.5em;
+}
+
+.navigacija a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #c5c5c5;
+  padding: 10px;
+  background-color: black;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.navigacija a:hover {
+  background-color: #c5c5c5;
+  color: #3b3b3b;
+}
+
+.navigacija-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.navigacija-footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #c5c5c5;
+  padding: 10px;
+  background-color: black;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.navigacija-footer a:hover {
+  background-color: #c5c5c5;
+  color: #3b3b3b;
+}
+
+#h2 {
+  font-size: 32px;
+}
+
+#table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+.item {
+  text-align: centerw;
+  padding: 10px;
+  margin: 3px 0;
+  background-color: #dcdcdc;
+}
+
+#ul {
+  list-style: upper-latin;
+  li {
+    margin: 1em;
+    background-color: #eeeeee;
+    width: 10%;
+    padding: 0.5em;
+    text-align: center;
+  }
+}
