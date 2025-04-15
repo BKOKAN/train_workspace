@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vjezba</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+    <hr />
+    <form class="flex-container">
+      <div class="form-group">
+        <label for="item">Unesi proizvod:</label>
+        <input
+          type="text"
+          id="item"
+          name="item"
+          placeholder="npr. Kruh"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Količina:</label>
+        <input type="number" name="amount" id="amount" placeholder="Količina" />
+      </div>
+
+      <button type="submit">Dodaj</button>
+    </form>
+
+    <hr />
+
+    <ul class="shopping-lista"></ul>
+
+    <div class="dugmad-container">
+      <button class="ukloni-kupljeno" type="button">Ukloni kupljeno</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
