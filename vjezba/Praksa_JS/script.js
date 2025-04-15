@@ -36,7 +36,9 @@ form.addEventListener("submit", (e) => {
       </label>
     </div>
     <div class="item-group">
-      <span class="kolicina-item">Količina: ${proizvod.kolicina}</span>
+      <button class="minus">−</button>
+      <span class="kolicina-item">${proizvod.kolicina}</span>
+      <button class="plus">+</button>
     </div>
     <div class="item-group">
       <span class="delete">X</span>
@@ -45,7 +47,6 @@ form.addEventListener("submit", (e) => {
 
   lista.appendChild(noviListItem);
 
-  // Resetiraj formu i objekt
   form.reset();
   proizvod.naziv = "";
   proizvod.kolicina = "";
@@ -62,20 +63,60 @@ lista.addEventListener("click", (e) => {
   }
 });
 
-// Stiliziranje kada se checkbox označi/odznači
+// Stiliziranje kada se checkbox označi/odznači i ikriminiranje i dekriminiranje kolicine
 lista.addEventListener("click", (e) => {
-  if (e.target.classList.contains("checkbox-kupljeno")) {
-    const checkbox = e.target;
-    const label = checkbox.closest("label");
-    const listItem = checkbox.closest("li");
-    const kolicina = listItem.querySelector(".kolicina-item");
+  const listItem = e.target.closest("li");
+  if (!listItem) return;
 
+  const kolicinaSpan = listItem.querySelector(".kolicina-item");
+  const checkbox = listItem.querySelector(".checkbox-kupljeno");
+  const label = listItem.querySelector("label");
+
+  // Obrada brisanja
+  if (e.target.classList.contains("delete")) {
+    listItem.remove();
+  }
+
+  // Obrada checkboxa (ručno kliknut)
+  else if (e.target.classList.contains("checkbox-kupljeno")) {
     if (checkbox.checked) {
       label.style.textDecoration = "line-through";
-      kolicina.style.textDecoration = "line-through";
+      kolicinaSpan.style.textDecoration = "line-through";
     } else {
       label.style.textDecoration = "none";
-      kolicina.style.textDecoration = "none";
+      kolicinaSpan.style.textDecoration = "none";
+    }
+  }
+
+  // Obrada smanjivanja količine
+  else if (e.target.classList.contains("minus")) {
+    let kolicina = parseInt(kolicinaSpan.textContent);
+    if (kolicina > 0) {
+      kolicina--;
+      kolicinaSpan.textContent = kolicina;
+    }
+
+    if (kolicina === 0) {
+      checkbox.checked = true;
+      label.style.textDecoration = "line-through";
+      kolicinaSpan.style.textDecoration = "line-through";
+    } else {
+      checkbox.checked = false;
+      label.style.textDecoration = "none";
+      kolicinaSpan.style.textDecoration = "none";
+    }
+  }
+
+  // Obrada povećavanja količine
+  else if (e.target.classList.contains("plus")) {
+    let kolicina = parseInt(kolicinaSpan.textContent);
+    kolicina++;
+    kolicinaSpan.textContent = kolicina;
+
+    if (kolicina > 0) {
+      checkbox.checked = false;
+      label.style.textDecoration = "none";
+      kolicinaSpan.style.textDecoration = "none";
     }
   }
 });

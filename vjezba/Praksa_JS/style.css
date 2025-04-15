@@ -66,6 +66,11 @@ h1 {
   font-weight: bold;
 }
 
+.plus {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
 .checkbox-kupljeno {
   font-size: 20px;
   input:hover {
