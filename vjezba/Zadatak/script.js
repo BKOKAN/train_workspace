@@ -13,6 +13,7 @@ const welcomeMessage = document.getElementById("welcome");
 const chatBox = document.getElementById("chat-box");
 const inputMessage = document.getElementById("message");
 const sendButton = document.getElementById("send-btn");
+const formMessage = document.getElementById("message-form");
 
 // Set the username when user1 or user2 is clicked
 user1.addEventListener("click", () => {
@@ -24,33 +25,32 @@ user2.addEventListener("click", () => {
   messages.user.name = "User 2";
   welcomeMessage.textContent = `Welcome, ${messages.user.name}!`;
 });
-document
-  .getElementById("message-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    // Get the message from the input field
-    const messageText = inputMessage.value.trim();
+formMessage.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    // If no user is selected, alert the user to choose a user
-    if (!messages.user.name) {
-      alert("Please select a user first.");
-      return;
-    }
+  // Get the message from the input field
+  const messageText = inputMessage.value.trim();
 
-    // If the message is not empty, add it to the chat box
-    if (messageText) {
-      // Create a new message item
-      const messageItem = document.createElement("div");
-      messageItem.classList.add("message");
+  // If no user is selected, alert the user to choose a user
+  if (!messages.user.name) {
+    alert("Please select a user first.");
+    return;
+  }
 
-      // Set the message content
-      messageItem.innerHTML = `<strong>${messages.user.name}:</strong> ${messageText}`;
+  // If the message is not empty, add it to the chat box
+  if (messageText) {
+    // Create a new message item
+    const messageItem = document.createElement("div");
+    messageItem.classList.add("message");
 
-      // Append the message to the chat box
-      chatBox.appendChild(messageItem);
+    // Set the message content
+    messageItem.innerHTML = `<strong>${messages.user.name}:</strong> ${messageText}`;
 
-      // Clear the message input field
-      inputMessage.value = "";
-    }
-  });
+    // Append the message to the chat box
+    chatBox.appendChild(messageItem);
+
+    // Clear the message input field
+    inputMessage.value = "";
+  }
+});

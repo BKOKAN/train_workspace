@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sadsadas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Naslov</h1>
+      <nav>
+        <button>1</button> // --- kada se klikne da bude ime 1
+        <button>2</button> // --- kada se klikne da bude ime 2
+        <button>3</button>
+      </nav>
+      <main class="main">
+        <form action="submit" id="forma">
+          <label for="inputIme">Ime</label>
+          <input type="text" id="inputIme" />
+          <!--/// element u kojem korisnik
+                upisuje svoje ime -->
+          <br />
+          <label for="inputPrezime">Prezime</label>
+          <input type="text" id="inputPrezime" />
+          <button type="submit" id="buttonSubmit">send</button>
+          <!--  // --- kada se klikne stovori
+                element koji ce pozdravit korisnika sa njegovim imenom koji je upisao
+                u inputu -->
+        </form>
+        <div class="prikaziPozdrav"></div>
+      </main>
+    </header>
+    <script src="sciprt.js"></script>
+  </body>
+</html>
