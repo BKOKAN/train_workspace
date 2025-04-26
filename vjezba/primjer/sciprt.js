@@ -30,17 +30,31 @@ buttonSubmit.addEventListener("click", function pozdraviKorisnika(event) {
 
   // stvara novi paragraf element u indexu automatski nakon submita tocnije nakon klika na button koji je izvucen iz doma
   const pozdrav = document.createElement("p");
+  // stvaramo element koji ce simulirati tipku za brisanje
+  const brisanjeElementa = document.createElement("button");
+  // stvaramo div da mozemo obrisati cijeli element sa paragrafom i buttnom
+  const divZaBrisanjePozdrava = document.createElement("div");
 
   // ${ime} i ${prezime} su varijable i koristimo ih unutar teksta kao poruku korisniku i moraju biti unutar backtick literala ``
   //  ${ime} i ${prezime} vrijednost vucemo iz linije 16 i 22 kada korisnik upise svoje ime i prezime
   pozdrav.innerHTML = `Pozdrav ${ime} ${prezime}!`;
+  brisanjeElementa.innerHTML = "X";
   //   console.log(pozdrav); ---> provjera da li ispisuje <p> `Pozdrav ${ime} ${prezime}!` <p>
 
-  // stavlja paragraf element unutar drugog elementa kao dijete tocnije stvara paragraf element unutar div elementa u ovom slucaju
-  prikaziPozdrav.appendChild(pozdrav);
+  // kada se klikne na submit stvara novi div element unutar drugog diva koji ima class name prikaziPozdrav
+  prikaziPozdrav.appendChild(divZaBrisanjePozdrava);
+
+  // nakon sto stvori novi div element onda unutar tog div elementa ce staviti novi paragraf element i button element
+  divZaBrisanjePozdrava.appendChild(pozdrav);
+  divZaBrisanjePozdrava.appendChild(brisanjeElementa);
 
   // nakon submita resetiraj polja za input imena i prezimena
   forma.reset();
+
+  // event listener koji ce obisati div element koji smo stovrili pomocu java scripta. Koji ima paragraf i button unutar sebe. Kada obrisemo taj div, brisemo sve sto je sa njim. Znaci i paragraf i button element unutar div elementa
+  brisanjeElementa.addEventListener("click", function (event) {
+    divZaBrisanjePozdrava.remove();
+  });
 });
 
 // niz sa imenima
