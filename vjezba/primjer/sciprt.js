@@ -76,3 +76,17 @@ function najduzaRijec(niz) {
 
 // pozivamo funkciju sa argumentom imena koji je niz i koji smo vec prije definirali povise i trazi najduzu rijec pomocu for petlje koju smo definirali povise
 najduzaRijec(imena);
+
+// definicija funkcije koja provjera da li je broj paran ili ne paran. Broj stavljamo kao argument da se upise.
+function provjeraParnogBroja(broj) {
+  // provjeravamo uvjet da li je broj paran. % stavaljamo koji izracunava da li broj ide do 0 ili ima ostatka
+  // % se naziva modul (modul od broja izracunava automatski da li broj ide do 0)
+  if (broj % 2 === 0) {
+    console.log(`${broj} je paran`);
+  } else {
+    console.log(`${broj} je neparan`); // --> ako ima ostatak onda je neparan
+  }
+}
+
+// pozivamo funkciju i u argument stavljamo neki broj za provjeru da li je paran
+provjeraParnogBroja(35);
