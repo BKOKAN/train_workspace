@@ -1,8 +1,154 @@
-.flexbox {
-  display: flex;
-  /* flex-direction: column; */
+/* Skraćeni zapis za animaciju */
+.element {
+  /* Skraćeni zapis animacije u jednom redu */
+  animation: move 2s ease-in-out 1s infinite;
+
+  /* Razdvojeni zapis animacije (prikazano u komentaru) */
+
+  /* animation-name: move; --- Ime animacije (move) */
+  /* animation-duration: 2s; --- /* Trajanje animacije (2 sekunde) */
+  /* animation-timing-function: ease-in-out; --- Funkcija vremenskog razmaka (sporo na početku i kraju, brzo u sredini) */
+  /* animation-delay: 1s; --- Kašnjenje prije početka animacije (1 sekunda) */
+  /* animation-iteration-count: infinite; --- Animacija se ponavlja beskonačno */
 }
-.flex-item {
-  width: 55%;
-  flex-wrap: wrap;
+
+/* Definicija @keyframes za animaciju "move" */
+@keyframes move {
+  from {
+    transform: translateX(0); /* Početna pozicija (bez pomaka) */
+  }
+  to {
+    transform: translateX(
+      300px
+    ); /* Krajnja pozicija (pomaknuto 300px udesno) */
+  }
+}
+
+/* Osnovni stil za sve .box elemente */
+.box {
+  width: 100px; /* širina kutije */
+  height: 100px; /* visina kutije */
+  background-color: tomato; /* boja pozadine */
+  margin: 20px; /* razmak oko kutije */
+  position: relative; /* omogućava pomjeranje pomoću 'left' */
+  animation-name: moveBox; /* ime animacije koju koristimo */
+  animation-duration: 2s; /* trajanje animacije: 2 sekunde */
+  animation-iteration-count: infinite; /* animacija se ponavlja beskonačno */
+}
+
+/* Animacija se kreće ravnomjerno, bez ubrzanja ili usporavanja */
+.linear {
+  animation-timing-function: linear;
+}
+
+/* Animacija počinje sporo, ubrza se, pa opet uspori (default) */
+.ease {
+  animation-timing-function: ease;
+}
+
+/* Animacija počinje sporo i ubrzava se */
+.ease-in {
+  animation-timing-function: ease-in;
+}
+
+/* Animacija počinje brzo, pa usporava */
+.ease-out {
+  animation-timing-function: ease-out;
+}
+
+/* Kombinacija: počinje i završava sporo, sredina brža */
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+/* Definicija animacije 'moveBox' – pomjeranje s lijeva na desno */
+@keyframes moveBox {
+  from {
+    left: 0; /* početna pozicija (lijevo) */
+  }
+  to {
+    left: 300px; /* krajnja pozicija (pomjereno udesno) */
+  }
+}
+
+/* Fading In */
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fading Out */
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Rotation */
+.rotate {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Class name with animation */
+.scale {
+  animation: scale 2s infinite ease-in;
+}
+
+/* Deinition of an animation */
+@keyframes scale {
+  from {
+    transform: scale(1) translateX(0);
+  }
+  to {
+    transform: scale(2) translateX(50px) translateY(50px);
+  }
+}
+
+/* Osnovni stil za .hover-change element (kocka narandžaste boje) */
+.hover-change {
+  width: 100px; /* širina kocke */
+  height: 100px; /* visina kocke */
+  background-color: tomato; /* narandžasta boja */
+  margin: 20px; /* razmak oko kocke */
+  display: inline-block; /* omogućava primjenu transformacija */
+  transform: translate(0, 0) skew(0deg, 0deg); /* početno stanje: bez pomicanja i iskrivljenja */
+  transition: transform 0.5s ease-in-out; /* glatka promjena transformacije (0.5s) */
+}
+
+/* Kada je miš iznad elementa (.hover-change) */
+.hover-change:hover {
+  transform: translate(200px, 0) skew(45deg, 45deg); /* pomakni se za 200px udesno i iskrivi za 45 stupnjeva */
 }
