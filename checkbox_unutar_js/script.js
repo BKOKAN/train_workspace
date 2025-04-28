@@ -194,3 +194,5 @@ const paragraf1 = document.querySelector("p");
 
 // 4 dio
 paragraf1.innerHTML = `Dobili smo vrijednost od korisnika ${vrijednostKorisnika}`;
+
+// Ako dohvacas input od korisnika sto je upisao i trebas spremati unutar varijable onda koristis event.target.value da bih dohvatila vrijednost koju je korisnik upisao
