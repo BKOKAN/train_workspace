@@ -1,6 +1,9 @@
 // Objekt za privremeno čuvanje unosa iz forme
 const proizvod = {
-  naziv: "",
+  naziv: {
+    Ime: "",
+    Vrsta: "",
+  },
   kolicina: "",
   checkbox: false,
 };
@@ -14,7 +17,7 @@ const btnUkloniKupljeno = document.querySelector(".ukloni-kupljeno");
 
 // Unos naziva proizvoda
 itemInput.addEventListener("input", (e) => {
-  proizvod.naziv = e.target.value;
+  proizvod.naziv.Ime = e.target.value;
 });
 
 // Unos količine

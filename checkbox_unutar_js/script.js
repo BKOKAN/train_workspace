@@ -25,11 +25,11 @@ paragraf.addEventListener("click", function (event) {
 // 3 event listener koji ce nakon inputa uzeti podatke i spremiti ih negdje
 // 4 prikazi te podatke unutar novog paragraf elementa
 
-const input = document.getElementsByTagName("input"); // izdvaja tocan element iz htmla cija je oznaka input ( <input /> ) tocna html oznaka --- 1 dio zadatka
+const unosPodatka = document.getElementsByTagName("input"); // izdvaja tocan element iz htmla cija je oznaka input ( <input /> ) tocna html oznaka --- 1 dio zadatka
 const submitButton = getElementsById("submit"); // mora imati id = "submit" -- drugi dio zadatka
 const podatak = "";
 // treci dio zadatka -- nakon input spremanje podatka sto je korinsik upisao
-input.addEventListener("input", function (event) {
+unosPodatka.addEventListener("input", function (event) {
   podatak = event.target.value; // Sto je korisnik upisao unutar input elementa spremamo u varijablu podatak
 });
 // cetvrti dio - stvoriti novi paragraf element i unutar njega prikazati podatak od korisnika nakon sumbita ( EVENT LISTNER )
@@ -196,3 +196,8 @@ const paragraf1 = document.querySelector("p");
 paragraf1.innerHTML = `Dobili smo vrijednost od korisnika ${vrijednostKorisnika}`;
 
 // Ako dohvacas input od korisnika sto je upisao i trebas spremati unutar varijable onda koristis event.target.value da bih dohvatila vrijednost koju je korisnik upisao
+
+// Objekt je jedna velika varijabla koja se sastoji od 2 ili vise informacija (varijabli). Unutar objekt informaciju pise sa ime: "vrijednost", -- nakon toga ide zarez. Citava struktura objekta je
+// const objekt = {
+// ime_informacije: vrijednost informacije (moze biti string za tekst "", moze biti true / false definicija),
+// };
