@@ -11,12 +11,15 @@ function Zbroj(broj1, broj2) {
 // 3 dio zadatka napraviti novi paragraf element nakon klika
 // 4 dio zadatka napraviti da unutar novo paragraf elementa ima sadrzaj "Hello world"
 const paragraf = document.getElementsByClassName("stvori-element"); // izvojili smo element iz html dokumenta prvi dio zadatka
+const bodyEl = document.querySelector("body"); // izvukli body element da bi mogli staviti novi element unutar html dokumenta
 //nakon izdvajanja elemnta radimo event listener drugi dio zadatka
 paragraf.addEventListener("click", function (event) {
   // treci dio zadatka stvaramo novi paragraf element
   const stvoriNoviElement = document.createElement("p");
   // cetvrti dio zadatka novi paragraf element ima tekst koji je zadan u zadatku
   stvoriNoviElement.innerHTML = "Hello world";
+  // za prikazivanje unutar html dokumenta
+  bodyEl.appendChild(stvoriNoviElement);
 });
 
 // 3. napravi event listener koji ce nakon submita uzeti podatke upisane od strane korisnika u input elemntu i prikazati ih na ekran pomocu novo paragraf elemnta
@@ -197,7 +200,18 @@ paragraf1.innerHTML = `Dobili smo vrijednost od korisnika ${vrijednostKorisnika}
 
 // Ako dohvacas input od korisnika sto je upisao i trebas spremati unutar varijable onda koristis event.target.value da bih dohvatila vrijednost koju je korisnik upisao
 
-// Objekt je jedna velika varijabla koja se sastoji od 2 ili vise informacija (varijabli). Unutar objekt informaciju pise sa ime: "vrijednost", -- nakon toga ide zarez. Citava struktura objekta je
+// Objekt je jedna velika varijabla koja se sastoji od 1 ili vise informacija (varijabli). Unutar objekt informaciju pise sa ime: "vrijednost", -- nakon toga ide zarez. Citava struktura objekta je
 // const objekt = {
 // ime_informacije: vrijednost informacije (moze biti string za tekst "", moze biti true / false definicija),
 // };
+
+// stvori novi paragraf element u kojem ce pisat "Dobar dan korisnice" i stavi ga unutar div elementa sa klasom ".divEl"
+// Izdvajamo div element sa klasom  ".divEl" da bi poslije mogli dodati mu novi element
+const divEl = document.querySelector(".divEl");
+
+// stvaranje novog elemnta paragraf
+const noviParagrafEl = document.createElement("p");
+// dodavanje u novi paragraf element tekst koji ce biti prikazan unutar htmla
+noviParagrafEl.innerHTML = "Dobar dan korisnice";
+// unutar div elementa postavljamo novi element koji ce biti paragraf sa tekstom koji smo definirali povise
+divEl.appendChild(noviParagrafEl);
