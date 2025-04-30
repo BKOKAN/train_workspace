@@ -1,0 +1,54 @@
+html {
+  /* background: url(./slike/instagram.jpeg); */
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.box_za_kontakt {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.box_za_kontakt {
+  a:first-child {
+    border-color: red;
+    border-style: dotted;
+    margin-bottom: 20px;
+  }
+}
+
+.tekst {
+  /* size of a font. EM is multiplied of the font size in pixels of the default size of the element or if its inherit of the parent element his font size */
+  font-size: 1.5em;
+  /* where we gonna place element that we selected */
+  justify-self: center;
+  text-align: center;
+  text-align: justify;
+}
+
+.footer {
+  /* how we gonna display items in side of the elements */
+  display: flex;
+  /* ---------------- */
+  /* direction in which elements go */
+  flex-direction: column;
+  /* ---------------- */
+  /* x direction if its column or if its row then its y direction (druga direction) */
+  justify-items: center;
+  /* ---------------- */
+  /* y direction if its column or if its row then its x direction (glavna direction) */
+  align-items: center;
+}
+
+header,
+main {
+  justify-self: center;
+  text-align: center;
+}
