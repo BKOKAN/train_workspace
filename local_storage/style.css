@@ -1,0 +1,133 @@
+body {
+  justify-items: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.buttonInfoContainer {
+  display: flex;
+  gap: 30px;
+  button {
+    border-radius: 10%;
+    padding: 1%;
+    box-shadow: 2px 2px 5px gray;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    background-color: #eee;
+    margin-bottom: 10px;
+  }
+  button:hover {
+    background-color: #575757;
+    padding: 1.5%;
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    box-shadow: 4px 4px 5px gray;
+  }
+}
+
+.infoContainer {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.submitInfo {
+  display: flex;
+  flex-direction: column;
+  .submit {
+    justify-self: center;
+    align-self: center;
+    padding: 2%;
+    color: black;
+    background-color: #eee;
+    border-radius: 10%;
+    box-shadow: 2px 2px 5px gray;
+  }
+  .submit:hover {
+    background-color: #575757;
+    padding: 3%;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+    box-shadow: 3.5px 3.5px 5px gray;
+  }
+}
+
+.edit {
+  justify-self: center;
+  align-self: center;
+  padding: 2%;
+  color: black;
+  background-color: #eee;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px gray;
+}
+.edit:hover {
+  background-color: #575757;
+  padding: 3%;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bolder;
+  box-shadow: 3.5px 3.5px 5px gray;
+}
+
+.editDiv {
+  margin-bottom: 15px;
+}
+
+.saveEdit {
+  justify-self: center;
+  align-self: center;
+  padding: 2%;
+  color: black;
+  background-color: #eee;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.saveEdit:hover {
+  background-color: #575757;
+  padding: 3%;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bolder;
+  box-shadow: 3.5px 3.5px 5px gray;
+}
+
+.editButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteExistingData {
+  justify-self: center;
+  align-self: center;
+  padding: 2%;
+  color: black;
+  background-color: #eee;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px gray;
+}
+.deleteExistingData:hover {
+  background-color: #575757;
+  padding: 3%;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bolder;
+  box-shadow: 3.5px 3.5px 5px gray;
+}
+
+footer {
+  text-align: center;
+}

@@ -150,5 +150,5 @@
 
 /* Kada je miš iznad elementa (.hover-change) */
 .hover-change:hover {
-  transform: translate(200px, 0) skew(45deg, 45deg); /* pomakni se za 200px udesno i iskrivi za 45 stupnjeva */
+  transform: translate(200px, 0) skew(45deg, 45deg); /*pomakni se za 200px udesno i iskrivi za 45 stupnjeva*/
 }
