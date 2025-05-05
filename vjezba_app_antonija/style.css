@@ -1,0 +1,32 @@
+html {
+  text-align: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+
+.submitInfo {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #eee;
+  color: #333;
+}
+
+.submitInfo:hover {
+  cursor: pointer;
+  padding: 8px;
+  background-color: blue;
+  color: #eee;
+  font-weight: bold;
+}
+
+.listaInformacija {
+  list-style: none;
+}
