@@ -1,0 +1,88 @@
+body {
+  justify-items: center;
+}
+
+#scriptPractice header {
+  text-align: center;
+}
+
+#infoForm {
+  margin: 10px auto 20px auto;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+#inputContainer {
+  margin-bottom: 13px;
+  label {
+    margin-right: 5px;
+  }
+}
+
+#buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  button:first-child {
+    margin-right: 10px;
+  }
+}
+
+#saveInfo:hover {
+  background-color: blue;
+  color: #eee;
+  padding: 1%;
+  font-size: 1.05em;
+  font-weight: bold;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#resetInfo:hover {
+  background-color: yellow;
+  color: #333;
+  padding: 0.75% 1.25%;
+  font-size: 1.02em;
+  font-weight: bold;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#edit:hover,
+#saveEdit:hover {
+  background-color: blue;
+  color: #eee;
+  padding: 1% 1.5%;
+  font-size: 1.05em;
+  font-weight: bold;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#delete:hover,
+#cancelEdit:hover {
+  background-color: red;
+  color: #333;
+  padding: 0.75% 1.25%;
+  font-size: 1.02em;
+  font-weight: bold;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#edit,
+#saveEdit,
+#delete,
+#cancelEdit {
+  margin-right: 5px;
+}
+strong {
+  font-size: 1.12em;
+}
+
+#alertMsg {
+  font-size: 1.35em;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
